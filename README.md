@@ -1,68 +1,68 @@
-# DarkTerm - En Retro Terminalemulator
+# DarkTerm - A Retro Terminal Emulator
 
-DarkTerm är ett försök att skapa en enkel, retro-inspirerad terminalemulator med hjälp av C++ och OpenGL.
+DarkTerm is an attempt to create a simple, retro-inspired terminal emulator using C++ and OpenGL.
 
-## Funktioner (Planerade/Under utveckling)
+## Features (Planned/Under Development)
 
-*   Rendering av tecken med FreeType
-*   Stöd för grundläggande ANSI escape-koder (färger, markörpositionering)
-*   Konfigurerbara färgteman (via JSON)
-*   Valfri CRT-skärmeffekt (scanlines, curvatur)
-*   Blinkande markör
+*   Character rendering with FreeType
+*   Support for basic ANSI escape codes (colors, cursor positioning)
+*   Configurable color themes (via JSON)
+*   Optional CRT screen effects (scanlines, curvature)
+*   Blinking cursor
 
-## Beroenden
+## Dependencies
 
-För att bygga och köra DarkTerm behöver du:
+To build and run DarkTerm, you need:
 
-*   **CMake** (minst version 3.10)
-*   En C++-kompilator med stöd för C++17 (t.ex. GCC, Clang, MSVC)
-*   **GLFW** (Bibliotek för fönsterhantering och input)
-*   **FreeType** (Bibliotek för fontrendering)
-*   **JsonCpp** (Bibliotek för att läsa JSON-konfigurationsfiler)
-*   **GLAD** (OpenGL Loading Library - inkluderas som submodule eller via `FetchContent`)
+*   **CMake** (minimum version 3.10)
+*   A C++ compiler with C++17 support (e.g., GCC, Clang, MSVC)
+*   **GLFW** (Library for window management and input)
+*   **FreeType** (Library for font rendering)
+*   **JsonCpp** (Library for reading JSON configuration files)
+*   **GLAD** (OpenGL Loading Library - included as submodule or via `FetchContent`)
 
-På **macOS** kan du installera de flesta beroenden med Homebrew:
+On **macOS**, you can install most dependencies with Homebrew:
 ```bash
 brew install cmake glfw freetype jsoncpp
 ```
 
-På **Linux** (Debian/Ubuntu):
+On **Linux** (Debian/Ubuntu):
 ```bash
 sudo apt update
 sudo apt install cmake build-essential libglfw3-dev libfreetype-dev libjsoncpp-dev
 ```
 
-## Bygga Projektet
+## Building the Project
 
-1.  Klona repot (om det ligger på t.ex. GitHub):
+1.  Clone the repository (if it's on GitHub, for example):
     ```bash
     git clone <repo-url>
     cd DarkTerm
     ```
-2.  Skapa en byggkatalog och kör CMake:
+2.  Create a build directory and run CMake:
     ```bash
     cmake -S . -B build
     ```
-3.  Bygg projektet:
+3.  Build the project:
     ```bash
     cmake --build build
     ```
 
-## Köra Projektet
+## Running the Project
 
-Efter en lyckad byggprocess finns den körbara filen i `build`-katalogen:
+After a successful build process, the executable file is in the `build` directory:
 
 ```bash
 ./build/DarkTerm
 ```
 
-## Konfiguration
+## Configuration
 
-Färgteman kan definieras i JSON-filer i `themes`-katalogen och väljas i koden (just nu hårdkodat i `ThemeManager.cpp`). Fontfilen som används laddas från `fonts`-katalogen och specificeras i `src/main.cpp`.
+Color themes can be defined in JSON files in the `themes` directory and selected in the code (currently hardcoded in `ThemeManager.cpp`). The font file used is loaded from the `fonts` directory and specified in `src/main.cpp`.
 
-## Kända Problem / Att Göra
+## Known Issues / To Do
 
-*   Markören ritas inte korrekt (pågående felsökning).
-*   Implementering av fler ANSI escape-koder behövs.
-*   CRT-effekten är inte fullt implementerad/testad.
-*   Felhantering kan förbättras. 
+*   Cursor is not rendering correctly (ongoing debugging).
+*   Implementation of more ANSI escape codes needed.
+*   CRT effect is not fully implemented/tested.
+*   Error handling can be improved. 
