@@ -1,0 +1,47 @@
+# Byggkataloger
+build/
+bin/
+lib/
+out/
+cmake-build-*/
+
+# Kompilerade filer
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# VS Code-specifika filer
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# CMake-filer
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+# MacOS-specifika filer
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Tillfälliga filer
+*~
+._*
+*.swp
+
+# Loggar
+*.log 
